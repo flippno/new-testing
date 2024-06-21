@@ -1,11 +1,11 @@
 Model Information:
-* title:	Mercury
-* source:	https://sketchfab.com/3d-models/mercury-32347fa4ec1a4987b71f461a401d91c4
-* author:	Akshat (https://sketchfab.com/shooter24994)
+* title:	Mercury sharp
+* source:	https://sketchfab.com/3d-models/mercury-sharp-0af93338a4754ab1a34dcdd332cfaa75
+* author:	kongle (https://sketchfab.com/minecraftnorge)
 
 Model License:
-* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
-* requirements:	Author must be credited. Commercial use is allowed.
+* license type:	CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)
+* requirements:	Author must be credited. Modified versions must have the same license. Commercial use is allowed.
 
 If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
-This work is based on "Mercury" (https://sketchfab.com/3d-models/mercury-32347fa4ec1a4987b71f461a401d91c4) by Akshat (https://sketchfab.com/shooter24994) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+This work is based on "Mercury sharp" (https://sketchfab.com/3d-models/mercury-sharp-0af93338a4754ab1a34dcdd332cfaa75) by kongle (https://sketchfab.com/minecraftnorge) licensed under CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)

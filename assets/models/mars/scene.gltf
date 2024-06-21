@@ -3,24 +3,24 @@
     {
       "bufferView": 2,
       "componentType": 5126,
-      "count": 3223,
+      "count": 8249,
       "max": [
-        0.999999463558197,
-        0.9999982118606567,
-        1.0
+        0.9872310161590576,
+        0.9872300028800964,
+        2.3050780296325684
       ],
       "min": [
-        -0.9999986290931702,
-        -0.999998927116394,
-        -1.0
+        -0.9872300028800964,
+        -0.9872310161590576,
+        0.30992400646209717
       ],
       "type": "VEC3"
     },
     {
       "bufferView": 2,
-      "byteOffset": 38676,
+      "byteOffset": 98988,
       "componentType": 5126,
-      "count": 3223,
+      "count": 8249,
       "max": [
         1.0,
         1.0,
@@ -36,7 +36,7 @@
     {
       "bufferView": 1,
       "componentType": 5126,
-      "count": 3223,
+      "count": 8249,
       "max": [
         1.0,
         1.0
@@ -50,39 +50,39 @@
     {
       "bufferView": 0,
       "componentType": 5125,
-      "count": 17664,
+      "count": 47616,
       "type": "SCALAR"
     }
   ],
   "asset": {
     "extras": {
-      "author": "Akshat (https://sketchfab.com/shooter24994)",
+      "author": "JanesBT (https://sketchfab.com/JanesBt)",
       "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
-      "source": "https://sketchfab.com/3d-models/mars-9c7bbc64d8c74acfa9ec344c0fc10e1a",
+      "source": "https://sketchfab.com/3d-models/mars-6f9ebc64e6c74068a8412a7dd74dfb96",
       "title": "Mars"
     },
-    "generator": "Sketchfab-12.65.0",
+    "generator": "Sketchfab-14.10.0",
     "version": "2.0"
   },
   "bufferViews": [
     {
       "buffer": 0,
-      "byteLength": 70656,
+      "byteLength": 190464,
       "name": "floatBufferViews",
       "target": 34963
     },
     {
       "buffer": 0,
-      "byteLength": 25784,
-      "byteOffset": 70656,
+      "byteLength": 65992,
+      "byteOffset": 190464,
       "byteStride": 8,
       "name": "floatBufferViews",
       "target": 34962
     },
     {
       "buffer": 0,
-      "byteLength": 77352,
-      "byteOffset": 96440,
+      "byteLength": 197976,
+      "byteOffset": 256456,
       "byteStride": 12,
       "name": "floatBufferViews",
       "target": 34962
@@ -90,49 +90,31 @@
   ],
   "buffers": [
     {
-      "byteLength": 173792,
+      "byteLength": 454432,
       "uri": "scene.bin"
     }
   ],
-  "extensionsRequired": [
-    "KHR_materials_pbrSpecularGlossiness"
-  ],
-  "extensionsUsed": [
-    "KHR_materials_pbrSpecularGlossiness"
-  ],
   "images": [
     {
-      "uri": "textures/Material.002_diffuse.jpeg"
+      "uri": "textures/Material.001_baseColor.jpeg"
     }
   ],
   "materials": [
     {
       "doubleSided": true,
-      "extensions": {
-        "KHR_materials_pbrSpecularGlossiness": {
-          "diffuseFactor": [
-            1.0,
-            1.0,
-            1.0,
-            1.0
-          ],
-          "diffuseTexture": {
-            "index": 0
-          },
-          "glossinessFactor": 0.19595917942265426,
-          "specularFactor": [
-            0.0,
-            0.0,
-            0.0
-          ]
-        }
-      },
-      "name": "Material.002"
+      "name": "Material.001",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.18100180697602258,
+        "roughnessFactor": 0.5825520342169467
+      }
     }
   ],
   "meshes": [
     {
-      "name": "Sphere_Material.002_0",
+      "name": "Object_0",
       "primitives": [
         {
           "attributes": {
@@ -176,59 +158,11 @@
       "children": [
         2
       ],
-      "matrix": [
-        1.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0,
-        0.0,
-        0.0,
-        -1.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0
-      ],
-      "name": "9200ff58b32943abb71f9b9bf8373a3b.fbx"
-    },
-    {
-      "children": [
-        3
-      ],
-      "name": "RootNode"
-    },
-    {
-      "children": [
-        4
-      ],
-      "matrix": [
-        100.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        -1.629206793918314e-05,
-        -99.99999999999868,
-        0.0,
-        0.0,
-        99.99999999999868,
-        -1.629206793918314e-05,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0
-      ],
-      "name": "Sphere"
+      "name": "planet.obj.cleaner.materialmerger.gles"
     },
     {
       "mesh": 0,
-      "name": "Sphere_Material.002_0"
+      "name": "Object_2"
     }
   ],
   "samplers": [

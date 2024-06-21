@@ -27,7 +27,7 @@ const mindarThree = new MindARThree({
     jupiterAnchor.group.add(jupiter.scene);
 
   const mars = await loadGLTF('../../assets/models/mars/scene.gltf');
-    mars.scene.scale.set(0.1, 0.1, 0.1);
+    mars.scene.scale.set(0.3, 0.3, 0.3);
     mars.scene.position.set(0, -0.4, 0);
 
   const marsAnchor = mindarThree.addAnchor(2);
@@ -41,7 +41,7 @@ const mindarThree = new MindARThree({
     mercuryAnchor.group.add(mercury.scene);
 
   const neptune = await loadGLTF('../../assets/models/neptune/scene.gltf');
-    neptune.scene.scale.set(0.1, 0.1, 0.1);
+    neptune.scene.scale.set(0.3, 0.3, 0.3);
     neptune.scene.position.set(0, -0.4, 0);
 
   const neptuneAnchor = mindarThree.addAnchor(4);
