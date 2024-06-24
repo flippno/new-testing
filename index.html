@@ -10,6 +10,8 @@
       }
     }
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
     <script type="module" src="./main.js"></script>
     <style>
       body {
@@ -27,6 +29,18 @@
 	left: 0;
 	z-index: 100;
       }
+      #planet {
+        position: absolute;
+        top: 86%; 
+        left: 48%; 
+        color: white; 
+        padding: 10px; 
+        background: rgba(0, 0, 0, 0); 
+        border-style: solid; 
+        border-color: white; 
+        border-radius: 8px; 
+        z-index: 1000;
+      }
     </style>
   </head>
   <body>
@@ -35,6 +49,7 @@
       <button id="stopButton">Stop</button>
     </div>
     <div id="container">
+      <button type="button" id="planet"></button>
     </div>
   </body>
 </html>
