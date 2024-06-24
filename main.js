@@ -111,42 +111,42 @@ p.style.display = "none";
         if(prediction[i].className === 'venus' && prediction[i].probability.toFixed(2) >= 0.75){
           p.style.display = "block";
           p.innerHTML = "Venus";
-          venus.scene.visible = true;
+          // venus.scene.visible = true;
         } else if(prediction[i].className === 'saturn' && prediction[i].probability.toFixed(2) >= 0.75){
           console.log("saturn")
           p.style.display = "block";
           p.innerHTML = "Saturn";
-          saturn.scene.visible = true;
+          // saturn.scene.visible = true;
         } else if(prediction[i].className === 'earth' && prediction[i].probability.toFixed(2) >= 0.80){
           console.log("earth")
           p.style.display = "block";
           p.innerHTML = "Earth";
-          earth.scene.visible = true;
+          // earth.scene.visible = true;
         } else if(prediction[i].className === 'jupiter' && prediction[i].probability.toFixed(2) >= 0.75){
           console.log("jupiter")
           p.style.display = "block";
           p.innerHTML = "Jupiter";
-          jupiter.scene.visible = true;
+          // jupiter.scene.visible = true;
         } else if(prediction[i].className === 'mars' && prediction[i].probability.toFixed(2) >= 0.75){
           console.log("mars")
           p.style.display = "block";
           p.innerHTML = "Mars";
-          mars.scene.visible = true;
+          // mars.scene.visible = true;
         } else if(prediction[i].className === 'mercury' && prediction[i].probability.toFixed(2) >= 0.75){
           console.log("mercury")
           p.style.display = "block";
           p.innerHTML = "Mercury";
-          mercury.scene.visible = true;
+          // mercury.scene.visible = true;
         } else if(prediction[i].className === 'neptune' && prediction[i].probability.toFixed(2) >= 0.75){
           console.log("neptune")
           p.style.display = "block";
           p.innerHTML = "Neptune";
-          neptune.scene.visible = true;
+          // neptune.scene.visible = true;
         } else if(prediction[i].className === 'uranus' && prediction[i].probability.toFixed(2) >= 0.75){
           console.log("uranus")
           p.style.display = "block";
           p.innerHTML = "Uranus";
-          uranus.scene.visible = true;
+          // uranus.scene.visible = true;
         }
       }
       window.requestAnimationFrame(detect);
@@ -155,7 +155,27 @@ p.style.display = "none";
   }
 
   const startButton = document.querySelector("#startButton");
-    
+  const planetButton = document.querySelector("#planet");
+  
+  planetButton.addEventListener("click", () => {
+    if(p.innerHTML === "venus"){
+      venus.scene.visible = true;
+    } else if(p.innerHTML === "saturn"){
+      saturn.scene.visible = true;
+    } else if(p.innerHTML === "earth"){
+      earth.scene.visible = true;
+    } else if(p.innerHTML === "jupiter"){
+      jupiter.scene.visible = true;
+    } else if(p.innerHTML === "mars"){
+      mars.scene.visible = true;
+    } else if(p.innerHTML === "mercury"){
+      mercury.scene.visible = true;
+    } else if(p.innerHTML === "neptune"){
+      neptune.scene.visible = true;
+    } else if(p.innerHTML === "uranus"){
+      uranus.scene.visible = true;
+    }
+  })
   startButton.addEventListener("click", () => {
 	  start();
   });
