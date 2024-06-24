@@ -175,6 +175,16 @@ p.style.display = "none";
     } else if(p.innerText === "Uranus"){
       uranus.scene.visible = true;
     }
+    else {
+      venus.scene.visible = false;
+      saturn.scene.visible = false;
+      earth.scene.visible = false;
+      jupiter.scene.visible = false;
+      mars.scene.visible = false;
+      mercury.scene.visible = false;
+      neptune.scene.visible = false;
+      uranus.scene.visible = false;
+    }
   })
   startButton.addEventListener("click", () => {
 	  start();
