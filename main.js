@@ -158,21 +158,21 @@ p.style.display = "none";
   const planetButton = document.querySelector("#planet");
   
   planetButton.addEventListener("click", () => {
-    if(p.innerHTML === "venus"){
+    if(p.innerText === "venus"){
       venus.scene.visible = true;
-    } else if(p.innerHTML === "saturn"){
+    } else if(p.innerText === "saturn"){
       saturn.scene.visible = true;
-    } else if(p.innerHTML === "earth"){
+    } else if(p.innerText === "earth"){
       earth.scene.visible = true;
-    } else if(p.innerHTML === "jupiter"){
+    } else if(p.innerText === "jupiter"){
       jupiter.scene.visible = true;
-    } else if(p.innerHTML === "mars"){
+    } else if(p.innerText === "mars"){
       mars.scene.visible = true;
-    } else if(p.innerHTML === "mercury"){
+    } else if(p.innerText === "mercury"){
       mercury.scene.visible = true;
-    } else if(p.innerHTML === "neptune"){
+    } else if(p.innerText === "neptune"){
       neptune.scene.visible = true;
-    } else if(p.innerHTML === "uranus"){
+    } else if(p.innerText === "uranus"){
       uranus.scene.visible = true;
     }
   })
