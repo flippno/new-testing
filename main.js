@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import { MindARThree } from 'mindar-image-three';
 import { loadGLTF } from './loader.js';
 
+// this is to access and initialize the engine for 3D and Augmented Reality
 const mindarThree = new MindARThree({
 	container: document.querySelector("#container"),
 	imageTargetSrc: "./assets/targets/planets.mind"
@@ -10,16 +11,23 @@ const mindarThree = new MindARThree({
 let p = document.getElementById("planet");
 p.style.display = "none";
   
+// this is to call the functions needed for the app to load
+// scene is a container that holds all 3D assets
+// camera is a component 
+// renderer is to render all assets from the scene
   const {renderer, scene, camera} = mindarThree;
 
+// adding light into the scene for the 3d object to be visible
   const light = new THREE.HemisphereLight( 0xffffff, 0xbbbbff, 1 );
     scene.add(light);
-
+  
+// loading all 3D assets 
+// anchor is a function for the 3d to achor on the marker to place the 3D object in a surface
   const earth = await loadGLTF('../../assets/models/earth/scene.gltf');
     earth.scene.scale.set(0.3, 0.3, 0.3);
     earth.scene.position.set(0, -0.4, 0);
     earth.scene.visible = false;
-
+  
   const earthAnchor = mindarThree.addAnchor(0);
     earthAnchor.group.add(earth.scene);
 
@@ -95,10 +103,8 @@ p.style.display = "none";
     let skipCount = 0;
 
     const detect = async () => {
-      //     if (activeAction !== idleAction) {
-      // window.requestAnimationFrame(detect);
-      // return;
-      //     }
+      // window.requestAnimationFrame(detect) is a function that every time there is an update on the screen this will be needed to trigger
+      // skipcount is a function in order to minimize the heavy loads of the processes from machine learning model and 3D assets
     if (skipCount < 10) {
       skipCount += 1;
       window.requestAnimationFrame(detect);
@@ -111,42 +117,34 @@ p.style.display = "none";
         if(prediction[i].className === 'venus' && prediction[i].probability.toFixed(2) >= 0.75){
           p.style.display = "block";
           p.innerHTML = "Venus";
-          // venus.scene.visible = true;
         } else if(prediction[i].className === 'saturn' && prediction[i].probability.toFixed(2) >= 0.75){
           console.log("saturn")
           p.style.display = "block";
           p.innerHTML = "Saturn";
-          // saturn.scene.visible = true;
         } else if(prediction[i].className === 'earth' && prediction[i].probability.toFixed(2) >= 0.80){
           console.log("earth")
           p.style.display = "block";
           p.innerHTML = "Earth";
-          // earth.scene.visible = true;
         } else if(prediction[i].className === 'jupiter' && prediction[i].probability.toFixed(2) >= 0.75){
           console.log("jupiter")
           p.style.display = "block";
           p.innerHTML = "Jupiter";
-          // jupiter.scene.visible = true;
         } else if(prediction[i].className === 'mars' && prediction[i].probability.toFixed(2) >= 0.75){
           console.log("mars")
           p.style.display = "block";
           p.innerHTML = "Mars";
-          // mars.scene.visible = true;
         } else if(prediction[i].className === 'mercury' && prediction[i].probability.toFixed(2) >= 0.75){
           console.log("mercury")
           p.style.display = "block";
           p.innerHTML = "Mercury";
-          // mercury.scene.visible = true;
         } else if(prediction[i].className === 'neptune' && prediction[i].probability.toFixed(2) >= 0.75){
           console.log("neptune")
           p.style.display = "block";
           p.innerHTML = "Neptune";
-          // neptune.scene.visible = true;
         } else if(prediction[i].className === 'uranus' && prediction[i].probability.toFixed(2) >= 0.75){
           console.log("uranus")
           p.style.display = "block";
           p.innerHTML = "Uranus";
-          // uranus.scene.visible = true;
         }
       }
       window.requestAnimationFrame(detect);

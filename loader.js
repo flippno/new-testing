@@ -1,3 +1,5 @@
+// loader.js is like a helper in order for the 3D assets to have a cleaner format if wanted to have a multiple assets
+
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
