@@ -147,43 +147,45 @@ p.style.display = "none";
           p.innerHTML = "Uranus";
         }
       }
+
+    const planetButton = document.querySelector("#planet");
+    
+    planetButton.addEventListener("click", () => {
+      if(p.innerText === "Venus"){
+        venus.scene.visible = true;
+      } else if(p.innerText === "Saturn"){
+        saturn.scene.visible = true;
+      } else if(p.innerText === "Earth"){
+        earth.scene.visible = true;
+      } else if(p.innerText === "Jupiter"){
+        jupiter.scene.visible = true;
+      } else if(p.innerText === "Mars"){
+        mars.scene.visible = true;
+      } else if(p.innerText === "Mercury"){
+        mercury.scene.visible = true;
+      } else if(p.innerText === "Neptune"){
+        neptune.scene.visible = true;
+      } else if(p.innerText === "Uranus"){
+        uranus.scene.visible = true;
+      }
+      else {
+        venus.scene.visible = false;
+        saturn.scene.visible = false;
+        earth.scene.visible = false;
+        jupiter.scene.visible = false;
+        mars.scene.visible = false;
+        mercury.scene.visible = false;
+        neptune.scene.visible = false;
+        uranus.scene.visible = false;
+      }
+    })
       window.requestAnimationFrame(detect);
     };
     window.requestAnimationFrame(detect);
   }
 
   const startButton = document.querySelector("#startButton");
-  const planetButton = document.querySelector("#planet");
   
-  planetButton.addEventListener("click", () => {
-    if(p.innerText === "Venus"){
-      venus.scene.visible = true;
-    } else if(p.innerText === "Saturn"){
-      saturn.scene.visible = true;
-    } else if(p.innerText === "Earth"){
-      earth.scene.visible = true;
-    } else if(p.innerText === "Jupiter"){
-      jupiter.scene.visible = true;
-    } else if(p.innerText === "Mars"){
-      mars.scene.visible = true;
-    } else if(p.innerText === "Mercury"){
-      mercury.scene.visible = true;
-    } else if(p.innerText === "Neptune"){
-      neptune.scene.visible = true;
-    } else if(p.innerText === "Uranus"){
-      uranus.scene.visible = true;
-    }
-    else {
-      venus.scene.visible = false;
-      saturn.scene.visible = false;
-      earth.scene.visible = false;
-      jupiter.scene.visible = false;
-      mars.scene.visible = false;
-      mercury.scene.visible = false;
-      neptune.scene.visible = false;
-      uranus.scene.visible = false;
-    }
-  })
   startButton.addEventListener("click", () => {
 	  start();
   });
